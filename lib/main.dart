@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:html/dom.dart' as dom;
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shimmer/shimmer.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 void main() {
   runApp(const MyApp());
@@ -277,8 +276,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 ListTile(
                   onTap: () {},
-                  leading: Icon(Icons.favorite),
-                  title: Text('Favourites'),
+                  leading: Icon(Icons.bookmark),
+                  title: Text('Save'),
                 ),
                 ListTile(
                   onTap: () {},
