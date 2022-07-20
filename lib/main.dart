@@ -163,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ElevatedButton(onPressed: getWebsiteData,
               child: Icon(Icons.refresh)
           ),
-        ],  
+        ],
         ),
         body: Column(
           children: <Widget>[
@@ -192,29 +192,35 @@ class _MyHomePageState extends State<MyHomePage> {
                       final description = descriptions[index];
                       final logos = logo[index];
                       final contrats = contrat[index];
-                      return ListTile(
-                        title: Text(title,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.green[500],
-                              fontFamily: GoogleFonts.roboto().toString(),
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold
-                          ),
-                        ),
-                        subtitle: Text(logos,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.grey[900],
-                              fontFamily: GoogleFonts.roboto().toString(),
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold
-                          ),
-                        ),
+                      return Card(
+                        elevation: 8,
+                        color: Colors.white70,
+                        shadowColor: Colors.grey[900],
+                        child:
+                          ListTile(
+                            title: Text(title,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.green[500],
+                                  fontFamily: GoogleFonts.roboto().toString(),
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
+                            subtitle: Text(logos,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.grey[900],
+                                  fontFamily: GoogleFonts.roboto().toString(),
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold
+                              ),
+                            ),
 
-                        onTap: () => Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Offre(titles: title, logo: logos, contrat: contrats, description: description)),
-                        ),
+                            onTap: () => Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Offre(titles: title, logo: logos, contrat: contrats, description: description)),
+                            ),
+                          ),
                       );
                     }
                 )
